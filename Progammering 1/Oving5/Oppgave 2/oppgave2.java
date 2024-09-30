@@ -14,7 +14,7 @@ public class oppgave2 {
         int ovreHel = 10;
         int nedreHel = 0;
 
-        int choice = 2; //1, 2, 3
+        int choice = 1; //1, 2, 3
 
         int sum = 0;
 

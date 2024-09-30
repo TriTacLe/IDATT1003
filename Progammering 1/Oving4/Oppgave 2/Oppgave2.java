@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Oppgave2 {
-        //attributter: variabler som gir egenskaper til objekter
+    
+    //attributter: variabler som gir egenskaper til objekter
     public static class Spiller {
+        
         private int sum;
         
         java.util.Random terning= new java.util.Random();
@@ -21,7 +23,7 @@ public class Oppgave2 {
             int terningkast = terning.nextInt(1,7);
             if (terningkast == 1){
                 sum = 0;
-                System.err.println("Kast på nytt!");
+                System.out.println("Kast på nytt!");
             } else {
                 sum += terningkast;      
             }                

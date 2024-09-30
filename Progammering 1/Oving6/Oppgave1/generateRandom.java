@@ -1,4 +1,3 @@
-
 public class generateRandom {
     //attributter
     private int range; //range fra 1 til 10 

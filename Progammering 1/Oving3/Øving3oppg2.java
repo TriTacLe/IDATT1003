@@ -24,8 +24,9 @@ public class Øving3oppg2 {
 
         int teller = 0;
 
-        if (tall == 2);
-            System.out.println(tall +  " er et primtall");
+        if (tall == 2){
+            System.out.println(tall +  " er et primtallllll");
+        }    
 
         for (int count = tall-1; count > 1; count--){ //kjører løkken fra count er 1 mindre enn tallet helt til count er større enn 1            
 
@@ -35,8 +36,8 @@ public class Øving3oppg2 {
 
                 if (teller == tall-2){
                     System.out.println(tall + " er et primtall");
-                }
-                continue;                
+                    break;
+                }        
             } else if (tall % count == 0) {
                 System.out.println(tall + " er ikke et primtall");
                 break;
