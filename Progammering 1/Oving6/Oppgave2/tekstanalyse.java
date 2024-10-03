@@ -1,5 +1,5 @@
 public class tekstanalyse {
-    private String tekstInput = "";
+    private String tekstInput = ""; //teksten
     private final int [] count = new int[30];//lager en liste med lengde lik A til Å, altså 29
     private int sumAntallChar = 0; //antall tegn
     private int antallUlikeChar = 0;//antall ulike char
