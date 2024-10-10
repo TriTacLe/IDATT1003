@@ -1,6 +1,6 @@
 public final class NyString {
-    private String myString;
-    private char myBokstav;
+    private final String myString;
+    private final char myBokstav;
 
     public NyString(String myString, char myBokstav) {
         this.myString = myString;
