@@ -1,11 +1,13 @@
 public class tester {
     public static void main(String[] args) {
         //instans av klassen NyString
-        NyString nyString = new NyString("Hello World Hello World llll", 'l');
+        String tekst = "Hello World Hello World llll";
+        NyString nyString = new NyString(tekst, 'l');
 
+        System.out.println("Før endring: " + tekst);
         //kaller på forkorting method og fjerning metoden og printer return verdi
-        System.out.println(nyString.forkorting()); // 
-        System.out.println(nyString.fjerning()); //    
+        System.out.println("Etter forkorting: " + nyString.forkorting()); // 
+        System.out.println("Etter fjerning: " + nyString.fjerning()); //    
     }
 }
     
