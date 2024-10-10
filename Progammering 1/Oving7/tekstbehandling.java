@@ -1,12 +1,14 @@
-import java.util.Arrays;
 
 public final class tekstbehandling {
     private final String myTekst;
     private final String [] words; 
+    private final String [] wordsUtenSkilletegn;
 
     public tekstbehandling (String myTekst) {
         this.myTekst = myTekst;
         this.words = myTekst.split(" ");//gjør om setningen til ord som lagres i listen words
+        this.wordsUtenSkilletegn = myTekst.split("[.!?;]"); //setningen uten skilletegn
+
     }
 
     public String getTekst() {
@@ -27,24 +29,34 @@ public final class tekstbehandling {
     }
 
     public double averageWordLength() {
-        int totalLengthOfWords = 0;
-        int numWords = 0;
-        
-        for (String s : words) {
+        double totalLengthOfWords = 0;
+        double numWords = 0;
+
+        for (String s : wordsUtenSkilletegn) {
             totalLengthOfWords += s.length(); 
             numWords++;
         }    
         if (numWords == 0){System.out.println("Teksten har ingen tegn");return 0;}
+        //System.out.println(totalLengthOfWords);
+        //System.out.println(numWords);
 
         return totalLengthOfWords/numWords;
     }
     
     public String replaceWord(String myWord, String newWord) {
-        int index = Arrays.asList(words).indexOf(myWord); //konverterer array til liste, kan bruke indexOf på liste og ikke array. Metoden virker bare for array av objekter og ikke primitive datatyper
-        
-        if (index != -1){words[index] = newWord;} else {return "Finner ikke noen ord av " + myWord;}
+        boolean found = false;
 
-        return String.join("",words); //gjør om arrayen til en string, delimiter " " vil sette mellomrom mellom hver element i arrayen
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equals(myWord)) {  //hvis ord i indeks i = myWord
+                words[i] = newWord;        
+                found = true;
+            }
+        }
+        if (!found) {
+            return "Finner ikke noen ord av " + myWord;
+        }
+
+        return String.join(" ",words); //gjør om arrayen til en string, delimiter " " vil sette mellomrom mellom hver element i arrayen
     } 
 
     /**dele opp i antall perioder. 
@@ -60,10 +72,9 @@ public final class tekstbehandling {
     */
     public double numWordsPeriod() {
         //System.out.println(myTekst); //sjekk printer ut teksten
-        String[] periods = myTekst.split("[.!?;]"); //split text til setninger using punctuation as the delimiter
         double totalWords = 0;
         double totalPeriod = 0;
-        for (String s : periods) {
+        for (String s : wordsUtenSkilletegn) {
             //System.out.println(s); //sjekk printer ut arrayen periods
             totalWords += s.length(); //antall ord per periode
             totalPeriod++;
