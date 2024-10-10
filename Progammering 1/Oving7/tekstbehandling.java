@@ -2,12 +2,10 @@ import java.util.Arrays;
 
 public final class tekstbehandling {
     private final String myTekst;
-    private final String myWord;
     private final String [] words; 
 
-    public tekstbehandling (String myTekst, String myWord) {
+    public tekstbehandling (String myTekst) {
         this.myTekst = myTekst;
-        this.myWord = myWord;
         this.words = myTekst.split(" ");//gjør om setningen til ord som lagres i listen words
     }
 
@@ -46,7 +44,7 @@ public final class tekstbehandling {
         
         if (index != -1){words[index] = newWord;} else {return "Finner ikke noen ord av " + myWord;}
 
-        return String.join(" ",words); //gjør om arrayen til en string, delimiter " " vil sette mellomrom mellom hver element i arrayen
+        return String.join("",words); //gjør om arrayen til en string, delimiter " " vil sette mellomrom mellom hver element i arrayen
     } 
 
     /**dele opp i antall perioder. 
@@ -61,17 +59,17 @@ public final class tekstbehandling {
     total antall ord / antall perioder 
     */
     public double numWordsPeriod() {
-        System.out.println(myTekst);
+        //System.out.println(myTekst); //sjekk printer ut teksten
         String[] periods = myTekst.split("[.!?;]"); //split text til setninger using punctuation as the delimiter
         double totalWords = 0;
         double totalPeriod = 0;
         for (String s : periods) {
-            System.out.println(s);
+            //System.out.println(s); //sjekk printer ut arrayen periods
             totalWords += s.length(); //antall ord per periode
             totalPeriod++;
         }
-        System.out.println(totalWords);
-        System.out.println(totalPeriod);
+        System.out.println("Antall ord: " + totalWords);
+        System.out.println("Antall perioder: " + totalPeriod);
 
         return totalWords/totalPeriod;
         /* 

@@ -1,16 +1,19 @@
 public class oppgave2 {
     public static void main(String[] args) {
 
-        tekstbehandling tekst = new tekstbehandling("Helloo. World.", "Hei");
+        tekstbehandling tekst = new tekstbehandling("æøåæøå. Hello. World. æøåæøå.");
 
-        System.out.println(tekst.getTekst());
-        System.out.println(tekst.getTekstUppercase());
+        System.out.println("Selve teksten: " + tekst.getTekst());
+        System.out.println("Teksten i storebokstaver: " + tekst.getTekstUppercase());
 
-        System.out.println(tekst.numWords());
-        System.out.println(tekst.averageWordLength());
+        System.out.println("Antall ord: " + tekst.numWords());
+        System.out.println("Gjennomsnittslig ordlengde " + tekst.averageWordLength());
 
-        System.out.println(tekst.replaceWord("Helloo.","ABcds"));
+        String OrgOrd = "æøåæøå.";
+        String nyttOrd = "ø æ å ø æ å";
 
-        System.out.println(tekst.numWordsPeriod());
+        System.out.println("Byttet ut: " + "\"" + OrgOrd + "\"" +" med " + "\"" + nyttOrd + "\"" + " Endret tekst: " + tekst.replaceWord(OrgOrd,nyttOrd)); //OrgOrd må inneholde ordet og skilletegnet bak 
+
+        System.out.println("Antall ord per periode(setning): " + tekst.numWordsPeriod());
     }
 }
