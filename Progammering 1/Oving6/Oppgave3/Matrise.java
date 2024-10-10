@@ -40,6 +40,12 @@ public final class Matrise {
 
     //metoden tar et argument, matrise, som er en instans av klassen Matrise. 
     //Metoden returnerer en ny instans av Matrise som representerer resultat av metoden (addisjonen).
+    /**
+     * Addere to matriser
+     * @param matrise matrisen som skal legges til 
+     * @return nye matrisen
+     */
+
     public Matrise addisjon(Matrise matrise) {
         //Sjekker om dimensjon til nåværende matrisen, this, er samme som dimensjonene i den andre matrisen, matrise.
         if (this.rows != matrise.rows ||this.cols !=matrise.cols){
