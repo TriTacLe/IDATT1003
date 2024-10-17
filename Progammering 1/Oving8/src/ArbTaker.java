@@ -6,4 +6,12 @@ public class ArbTaker {
     private int månedslønn;
     private double skatteprosent;
 
+    public Person getPersonalia(){
+        return personalia;
+    }
+
+    public int getArbeidstakernr(){
+        return arbeidstakernr;
+    }
+
 }

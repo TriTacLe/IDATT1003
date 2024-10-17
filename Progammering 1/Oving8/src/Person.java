@@ -3,15 +3,15 @@ public class Person {
     private String etternavn;
     private int alder;
 
-    public getFornavn(){
+    public String getFornavn(){
         return fornavn;
     }
 
-    public getEtternavn(){
+    public String getEtternavn(){
         return etternavn;
     }
 
-    public getAlder(){
+    public int getAlder(){
         return alder;
     }
 
