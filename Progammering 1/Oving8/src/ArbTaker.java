@@ -6,5 +6,4 @@ public class ArbTaker {
     private int månedslønn;
     private double skatteprosent;
 
-    get
 }
