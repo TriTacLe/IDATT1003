@@ -5,6 +5,7 @@ public class ArbTaker {
     private double månedslønn;
     private double skatteprosent;
 
+
     public ArbTaker(Person personalia, int arbeidstakernr, int ansettelsesår, double månedslønn, double skatteprosent) {
         this.personalia = personalia;
         this.arbeidstakernr = arbeidstakernr;
@@ -14,7 +15,7 @@ public class ArbTaker {
     }
 
     /**
-     * getters
+     * getters for alle attributter
      * @return
      */
     public Person getPersonalia(){
