@@ -107,4 +107,9 @@ public class ArbTaker {
         }
         return personalia.getFornavn() + " har år jobbet: " + aar + " år";
     }
+
+    @Override
+    public String toString(){
+        return "Hello";
+    }
 }
