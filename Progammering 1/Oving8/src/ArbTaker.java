@@ -60,8 +60,12 @@ public class ArbTaker {
     }
 
     //metoder
-    public String Navn() {
+    public String getNavn() {
         return getPersonalia().getEtternavn() +","+getPersonalia().getFornavn();
+    }
+
+    public int getAlder() {
+        return getPersonalia().getAlder();
     }
 
     public double setSkattetrekkMåned() {
