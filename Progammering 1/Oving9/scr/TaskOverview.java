@@ -1,5 +1,6 @@
 package scr;
 import java.util.ArrayList; // import the ArrayList class
+import java.util.Random;
 
 public class TaskOverview {
     private int totalStud = 0;
@@ -12,7 +13,7 @@ public class TaskOverview {
 
     //metoder
     public int getTotalStud(){
-        return totalStud;
+        return students.size();
     }
     
     public void registerNewStudent(Student student) {
@@ -22,7 +23,22 @@ public class TaskOverview {
             } 
         }
         students.add(student);
-        totalStud++;
+    }
+
+    public void addStudentTest() {
+        Random rand = new Random();
+        String[] possibleNames = {
+            "Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah",
+            "Ivan", "Jasmine", "Kyle", "Laura", "Michael", "Nina", "Oliver", "Paula",
+            "Quentin", "Rachel", "Sam", "Tina", "Uma", "Victor", "Wendy", "Xander",
+            "Yara", "Zane"
+        };
+        
+        // Add random students
+        for (String name : possibleNames) {
+            int randomTasks = rand.nextInt(10) + 1; // Random tasks between 1 and 10
+            students.add(new Student(name, randomTasks));
+        }
     }
 
     public ArrayList<Student> getTableTask(){

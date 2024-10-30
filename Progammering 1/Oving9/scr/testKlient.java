@@ -5,6 +5,7 @@ public class testKlient {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         TaskOverview overview = new TaskOverview();
+        overview.addStudentTest();
         
         //Studenter som allerede eksisterer
         System.out.println("Student task overview");

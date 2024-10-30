@@ -42,7 +42,7 @@ public class Student {
 
     @Override
     public String toString(){
-        return "Name: " + name + ". total task done: " + totalTask;
+        return "Name: " + name + ". Total task done: " + totalTask;
     }
 
 }
