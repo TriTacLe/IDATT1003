@@ -34,9 +34,9 @@ public class TaskOverview {
             "Yara", "Zane"
         };
         
-        // Add random students
+        
         for (String name : possibleNames) {
-            int randomTasks = rand.nextInt(10) + 1; // Random tasks between 1 and 10
+            int randomTasks = rand.nextInt(200) + 1;
             students.add(new Student(name, randomTasks));
         }
     }
