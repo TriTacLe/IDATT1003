@@ -38,7 +38,8 @@ public class EventRegister {
         }
         if(!eventExist){
             events.add(event);
-            System.out.println("Added event: " + event.getName());
+            //System.out.println("Added event: " + event.getName());
+            System.out.println("Added event: " + event);
         }
     }
     /**
