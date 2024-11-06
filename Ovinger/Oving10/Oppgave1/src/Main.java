@@ -12,9 +12,9 @@ public class Main {
         Random random = new Random();
 
         //attributter
-        String[] names = {"Sirkus", "Konsert", "Theater", "Exhibition", "Workshop"};
+        String[] names = {"Tix konsert", "Q4 presentasjon", "Q3 presentasjon", "Generalforsamling", "Julebord"};
         String[] locations = {"Trondheim", "Oslo", "Kairo", "California", "Lofoten"};
-        String[] organizer = {"Aker", "Equinor", "Kongsberg", "LookheadMartin", "BlackRock"};
+        String[] organizer = {"Aker", "Alphabet", "Kongsberg gruppen", "LookheadMartin", "BlackRock"};
         String[] types = {"Festival", "Concert", "Show", "Exhibit", "Conference"};
 
         // Create and register 5 random events
@@ -31,7 +31,7 @@ public class Main {
         boolean runner = true;
 
         while (runner) {
-            System.out.println("--Chose an option--");
+            System.out.println("Chose an option");
             System.out.println("1. Find events at a location");
             System.out.println("2. Find events at a date");
             System.out.println("3. Find events between two date intervalls (two digits)");
