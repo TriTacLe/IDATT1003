@@ -27,6 +27,10 @@ public class Dish {
     public double getPrice(){return price;}
     public String getRecipe(){return recipe;}
 
+    /***
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Name: " + name + ".Type: " + type + ". Price: " + price + ". Recipe: " + recipe;

@@ -12,14 +12,18 @@ public class test {
 
         Dish pasta = new Dish("Pasta","Hovedrett" , 149, "Paste, Oil, Garlic, Chicken");
         Dish FriedChicken = new Dish("Fried Chicken", "Hovedrett", 129, "Chicken, Wheate, Cornflower, Oil");
-        
+
+        System.out.println("• Å registrere en ny rett.");
         menu1.registerNewDish(pasta);
         menu1.registerNewDish(FriedChicken);
+        System.out.println("• Å finne en rett, gitt navnet.");
         menu1.findDish(pasta);
+        System.out.println("• Å finne alle retter av en gitt type.");
         menu1.findDishByType("Hovedrett");
-
+        System.out.println("• Å registrere en ny meny som består av ett sett med retter.");
         restaurant.registerNewMenu(menu1);
+        System.out.println("• Å finne alle menyer med totalpris innenfor et gitt intervall.");
+        restaurant.findMenuByPriceRange(100,400);
 
-        menu1.setPrice();
     }
 }

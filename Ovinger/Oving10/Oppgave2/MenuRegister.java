@@ -74,17 +74,20 @@ public class MenuRegister {
         }
     }
 
+    /***
+     *
+     * @return
+     */
     public double getPrice(){
         double price = 0;
         for (Dish dish : dishes.values()){
-            price += dish.getPrice();
+            double dishPrice = dish.getPrice();
+            price += dishPrice;
         }
-        System.out.println(price);
-        return price;
-    }
+        return price;    }
 
     @Override
     public String toString() {
-        return "Name: " + name + ". Dishes +" + dishes;
+        return "Name: " + name + ". Dishes: " + dishes;
     }
 }
