@@ -89,7 +89,7 @@ public class RealEstate {
     }
 
     /**
-     * Owner of the property can be changed
+     * Owner of the property can be changed. Never used but not useless ot have
      * @param ownerName
      * @return ownerName som representerer argumentet
      */
@@ -101,7 +101,7 @@ public class RealEstate {
     }
 
     /**
-     * Area of the property can be changed
+     * Area of the property can be changed. Never used but not useless ot have
      * @param area
      * @return area
      */
