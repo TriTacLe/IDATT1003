@@ -1,9 +1,20 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * User interface class.
+ * How the client communicate with the application. The client doesnt have direct access to realestate and realesateregister
+ */
 public class UI {
-    private final Scanner sc = new Scanner(System.in);  // Single scanner instance for the entire class
+    /**
+     * Scanner object
+     */
+    private final Scanner sc = new Scanner(System.in);
 
+    /**
+     * Methods that shows the menu
+     * @return
+     */
     private int showMenu() {
         System.out.println("\n***** Property Register Application v0.1 *****\n");
         System.out.println("1. Add property to register");
@@ -96,7 +107,7 @@ public class UI {
                     realEstateRegister.addRealEstate(realEstate);
                     break;
                 case 2:
-                    System.out.println(realEstateRegister);  // Assuming toString() lists properties
+                    System.out.println(realEstateRegister);
                     break;
                 case 3:
                     System.out.println("Enter municipality number, section number, and lot number:");

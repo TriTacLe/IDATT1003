@@ -20,6 +20,10 @@ public class RealEstateRegister {
         return realEstates;
     }
 
+    /**
+     * Add a realEstate instance to the ArrayList if input is getting validated
+     * @param realEstate realstate instance
+     */
     public void addRealEstate(RealEstate realEstate){
         if (realEstate == null){
             throw new IllegalArgumentException("Enter a real estate value that is not null");
@@ -32,6 +36,10 @@ public class RealEstateRegister {
         realEstates.add(realEstate);
     }
 
+    /**
+     * remove a realEstate instance to the ArrayList if input is getting validated
+     * @param realEstate realEstate instance
+     */
     public void removeRealEstate(RealEstate realEstate){
         if (realEstate == null){
             throw new IllegalArgumentException("Enter a real estate value that is not null");
@@ -44,6 +52,10 @@ public class RealEstateRegister {
         realEstates.remove(realEstate);
     }
 
+    /**
+     * Methods that give amount properties registered (amount realEstate instances in the ArrayList)
+     * @return realestate size
+     */
     public int totalRealEstates(){
         return realEstates.size();
     }
@@ -80,7 +92,10 @@ public class RealEstateRegister {
         return true;
     }
 
-
+    /**
+     * Methods that calculates the average area of all the realEstate objects in arrayList
+     * Basic math
+     */
     public void averageArea(){
         double sum = 0;
         for (RealEstate realEstate : realEstates){
@@ -92,7 +107,6 @@ public class RealEstateRegister {
 
     /**
      * Method that finds all instances of realEstate in the instance of RealEstateRegister with the same lot number
-     *
      * @param lotNumber lot number
      * @return
      */

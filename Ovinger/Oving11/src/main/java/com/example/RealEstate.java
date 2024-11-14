@@ -69,21 +69,50 @@ public class RealEstate {
         this.ownerName = ownerName;
     }
 
+    /**
+     * getters
+     * @return
+     */
     public int getMunicipalityNumber(){
         return municipalityNumber;
     }
+
+    /**
+     * getters
+     * @return
+     */
     public String getMunicipalityName(){
         return municipalityName;
     }
+
+    /**
+     * Getters
+     * @return
+     */
     public int getLotNumber(){
         return lotNumber;
     }
+
+    /**
+     * Getters
+     * @return
+     */
     public int getSectionNumber(){
         return sectionNumber;
     }
+
+    /**
+     * getters
+     * @return
+     */
     public double getArea(){
         return area;
     }
+
+    /**
+     * getters
+     * @return
+     */
     public String getOwnerName(){
         return ownerName;
     }
