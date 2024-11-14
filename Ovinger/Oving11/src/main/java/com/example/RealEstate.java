@@ -155,6 +155,6 @@ public class RealEstate {
 
     @Override
     public String toString() {
-        return "Municipality number: " + municipalityNumber + " Municipality name: " + municipalityName + ". Lot number: " + lotNumber + ". Section number: " + sectionNumber + ". name: " + name + ". Area: " + area + ". Owner name: " + ownerName; //+ "\n" + "Formatted: " +formatMunicipalityLotSectionNumber() + ".";
+        return "Municipality number: " + municipalityNumber + " Municipality name: " + municipalityName + ". Lot number: " + lotNumber + ". Section number: " + sectionNumber + ". name: " + name + ". Area: " + area + ". Owner name: " + ownerName + "\n"; //+ "\n" + "Formatted: " +formatMunicipalityLotSectionNumber() + ".";
     }
 }

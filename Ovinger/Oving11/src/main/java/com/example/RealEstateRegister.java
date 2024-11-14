@@ -125,6 +125,11 @@ public class RealEstateRegister {
 
     @Override
     public String toString() {
-        return realEstates +":";
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (RealEstate realEstate : realEstates) {
+            stringBuilder.append("-").append(realEstate);
+        }
+        return "realestates:\n" + stringBuilder;
     }
 }
